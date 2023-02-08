@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<script src="main.js" defer></script>
+		<link rel="stylesheet" href="main.css" />
+		<title>Piekarz3i</title>
+	</head>
+	<body>
+		<form action="#">
+			<fieldset>
+				<legend>Podstawowe dane</legend>
+				<label for="elementSelect"
+					>Nazwa elementu:
+					<select name="elementSelect" id="elementSelect">
+						<optgroup label="1">
+							<option value="p">p</option>
+							<option value="h1">h1</option>
+						</optgroup>
+						<optgroup label="2">
+							<option value="div">div</option>
+							<option value="man">main</option>
+						</optgroup>
+					</select>
+				</label>
+				<label for="elementText"
+					>Tekst w elemencie:
+					<input
+						type="text"
+						name="elementText"
+						id="elementText"
+						placeholder="Podaj tekst elementu"
+				/></label>
+				<label for="elementDate"
+					>Data w elemencie:
+					<input
+						type="date"
+						name="elementDate"
+						id="elementDate"
+						value="2023-02-01"
+				/></label>
+			</fieldset>
+			<fieldset>
+				<legend>Formatowanie bloku</legend>
+				<label for="elementPadding"
+					>Padding w elemencie: 0rem
+					<input
+						type="range"
+						name="elementPadding"
+						id="elementPadding"
+						min="0"
+						max="1"
+						step="0.2"
+					/>
+					1rem
+				</label>
+				<label for="elementMargin"
+					>Margin w elemencie: 0rem
+					<input
+						type="range"
+						name="elementMargin"
+						id="elementMargin"
+						min="0"
+						max="1"
+						step="0.2"
+					/>
+					1rem
+				</label>
+			</fieldset>
+			<fieldset>
+				<legend>Kolory</legend>
+				<label for="elementColor"
+					>Kolor czcionki:
+					<input type="color" name="elementColor" id="elementColor"
+				/></label>
+				<label for="elementColorBg"
+					>Kolor tła elementu
+					<input
+						type="color"
+						name="elementColorBg"
+						id="elementColorBg"
+						value="#89F0ED"
+				/></label>
+			</fieldset>
+			<fieldset>
+				<legend>Formatowanie tekstu</legend>
+				<fieldset>
+					<legend>Odległość między elementami (rem)</legend>
+					<label for="elementSpace"
+						><input
+							type="number"
+							name="elementLetterSpacing"
+							id="elementLetterSpacing"
+							value="0"
+						/>
+						rem</label
+					>
+				</fieldset>
+				<fieldset>
+					<legend>Wyrównanie tekstu</legend>
+					<label for="elementAlign">
+						lewo
+						<input type="radio" name="elementAlign" id="left" value="left" />
+						środek
+						<input
+							type="radio"
+							name="elementAlign"
+							id="center"
+							value="center"
+						/>
+						prawo
+						<input type="radio" name="elementAlign" id="right" value="right" />
+					</label>
+				</fieldset>
+				<fieldset>
+					<legend>Dekoracja tekstu</legend>
+					<label for="elementUpgrade">
+						podkreślenie
+						<input
+							type="checkbox"
+							name="elementUpgrade"
+							id="underline"
+							value="underline"
+						/>
+						nadkreślenie
+						<input
+							type="checkbox"
+							name="elementUpgrade"
+							id="overline"
+							value="overline"
+						/>
+						przekreślenie
+						<input
+							type="checkbox"
+							name="elementUpgrade"
+							id="line-through"
+							value="line-through"
+						/>
+					</label>
+				</fieldset>
+			</fieldset>
+			<div>
+				<input type="submit" value="Prześlij" id="submitButton" />
+			</div>
+			<div id="display"></div>
+		</form>
+	</body>
+</html>
